@@ -1,20 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ExampleComponent } from './example/example.component';
 
 const routes: Routes = [
+  //Agregando una ruta
   {
     path: "",
-    component : ExampleComponent
+    loadChildren: () => import(`./modules/home/home.module`).then(m => m.HomeModule)//lazyLoading
   }
-  //Agregando otra ruta
-/*
-  ,
-  {
-    path: "hello",
-    component : ExampleComponent
-  }
-*/
 ];
 
 @NgModule({

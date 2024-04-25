@@ -3,16 +3,19 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ExampleComponent } from './example/example.component';
+import { RouterModule } from '@angular/router';
+import { HomePageComponent } from './modules/home/pages/home-page/home-page.component';
 
 @NgModule({
-  declarations: [
+  declarations: [ //son componentes, directivas, pipes 
     AppComponent,
-    ExampleComponent
+    HomePageComponent
   ],
-  imports: [
+  imports: [ //Solo se importan modulos
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule,
+    
   ],
   providers: [
     provideClientHydration()
