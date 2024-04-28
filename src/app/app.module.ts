@@ -14,8 +14,7 @@ import { RouterModule } from '@angular/router';
   imports: [ //Solo se importan modulos
     BrowserModule,
     AppRoutingModule,
-    RouterModule,
-    
+    RouterModule
   ],
   providers: [
     provideClientHydration()
